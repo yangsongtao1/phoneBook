@@ -1,2 +1,4 @@
+.DS_Store
 view/node_module/
 service/node_module/
+*.log
