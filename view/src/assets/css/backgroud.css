@@ -1,0 +1,63 @@
+.backgroupImg{
+  height: 100%;
+  width: 100%;
+  background: url("../img/background.jpeg") no-repeat;
+  background-size: cover;
+}
+
+.backgroupImg .centerPanel {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centerPanel .title{
+  text-align: center;
+  font-family: 宋体;
+  color: #fff;
+}
+.centerPanel .Form{
+  text-align: center;
+}
+.centerPanel .Form .input, .centerPanel .Form .input{
+  width: 80%;
+  margin: 0 auto;
+  background: transparent;
+  font-size: 17px;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  margin-top: 30px;
+  outline: none;
+  padding-left: 45px;
+  color: #fff;
+}
+.centerPanel .Form button{
+  margin-top: 30px;
+  height: 50px;
+  width: 40%;
+  font-size: 20px;
+  display: inline-block;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+}
+.centerPanel .btnGrounp{
+  width: 80%;
+  margin: 0 auto;
+}
+.centerPanel .btnGrounp::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.centerPanel .btnGrounp .leftBtn{
+  float: left;
+  background: #0B73FF;
+  color: #fff;
+}
+.centerPanel .btnGrounp .rightBtn{
+  float: right;
+  background: #00C7FF;
+  color: #fff;
+}

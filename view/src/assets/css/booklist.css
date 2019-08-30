@@ -1,0 +1,136 @@
+.title {
+  padding: 10px;
+}
+.layout-content-main{
+  padding: 10px;
+  height: 100%;
+}
+.layout-content-main-content-search{
+  padding-top: 20px;
+  font-size: 16px;
+}
+.layout-content-main-content-search .nameInput {
+  width: 30%;
+  display: inline-block;
+}
+.layout-content-main-content-search .nameInput input:focus{
+  border: unset !important;
+  outline: unset !important;
+  box-shadow: unset !important;
+}
+.layout-content-main .tipInfo{
+  height: 35px;
+  line-height: 35px;
+  font-size: 15px;
+}
+.layout-content-main .groups .group label, .layout-content-main .groups .allCheck{
+  font-size: 15px;
+}
+.layout-content-main .groups .groupLabel{
+  display: inline-block;
+  position: relative;
+}
+.layout-content-main .groups .groupLabel:hover .delGroup{
+  display: inline-block;
+}
+.layout-content-main .groups .delGroup{
+  display: none;
+  position: absolute;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  border: none;
+  font-size: 20px;
+  border-radius: 20px;
+  color: red;
+  top: -7px;
+  right: -7px
+}
+.layout-content-main .groups .allCheck, .layout-content-main .groups .group{
+  display: inline-block;
+}
+
+.layout-content-main .phoneList{
+  margin-top: 10px;
+  height: 85%;
+}
+.layout-content-main .listitem{
+  display: inline-block;
+  margin-top: 20px;
+  height: 150px;
+  border: 1px solid #5c5c5c;
+  margin-left: 3%;
+  border-radius: 5px;
+}
+.layout-content-main .listitem .itemtipcontent{
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+.layout-content-main .listitem .itemtipcontent .itemtip{
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.layout-content-main .listitem .itemtipcontent .itemtip p{
+  height: 75px;
+  line-height: 75px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.layout-content-main .listitem .itemtipcontent .itemtip p.del{
+  color: red;
+}
+.layout-content-main .listitem .itemtipcontent .itemtip p.showInfo{
+  color: #00C7FF;
+}
+.layout-content-main .listitem .itemtipcontent .itemtip p:hover{
+  font-size: 25px;
+  transition: font-size 1s ease 0s;
+}
+.layout-content-main .listitem .itemContent{
+  position: relative;
+  height: 100%;
+}
+.layout-content-main .listitem .itemContent p{
+  height: 28px;
+  line-height: 28px;
+  font-size: 13px;
+}
+.layout-content-main .listitem .itemContent .itemContentHeader{
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: blue;
+  color: #fff;
+}
+.layout-content-main .listitem .itemContent .ivu-col{
+  display: inline-block;
+  height: calc(100% - 30px);
+}
+.layout-content-main .listitem .itemContent .itemInfo{
+  white-space: nowrap;
+}
+.layout-content-main .listitem .itemContent .itemInfo .address{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  cursor: pointer;
+}
+.avatorImg{
+  height: 95%;
+  width: 100%;
+}
+.closeIcon {
+  display: none;
+}
+.layout-content-main .listitem .itemtipcontent:hover .itemtip{
+  display: block;
+}

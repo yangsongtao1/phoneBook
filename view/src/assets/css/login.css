@@ -1,0 +1,58 @@
+.login{
+  min-height: 500px;
+}
+.login .loginPanel{
+  width: 550px;
+  height:400px;
+}
+.loginPanel .title{
+  font-size: 35px;
+  letter-spacing: 10px;
+}
+.loginPanel .Form .input, .loginPanel .Form .input{
+  height: 50px;
+  line-height: 50px;
+}
+.loginPanel .icon{
+  font-size: 30px;
+  position: absolute;
+  bottom: 6px;
+  left: 12%;
+  color: #3a8bf9;
+}
+.loginPanel .Form .forgetPw{
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+}
+.loginPanel .Form .forgetPw:hover{
+  color: #2c84ff;
+}
+.loginPanel .aside{
+  position: relative;
+}
+.loginPanel .aside .Errortip{
+  color: red;
+  position: absolute;
+  text-align: left;
+  left: 10%;
+}
+.loginPanel .aside.tip{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: #000;
+  font-size: 15px;
+}
+.loginPanel .aside.tip::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.loginPanel .aside .select{
+  float: left;
+}
+.loginPanel .aside .select .remLabel:hover{
+  color: #2c84ff;
+  cursor: pointer;
+}

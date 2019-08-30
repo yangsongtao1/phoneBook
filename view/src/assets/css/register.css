@@ -1,0 +1,57 @@
+.register{
+  min-height: 600px;
+  min-width: 600px;
+}
+.registerPanel{
+  width: 550px;
+  height: 500px;
+}
+.registerPanel .title{
+  font-size: 35px;
+  letter-spacing:20px;
+}
+
+.registerPanel .input{
+  height: 40px;
+  line-height: 40px;
+}
+.registerPanel .Form .aside .emailInput{
+  position: relative;
+  width: 55%;
+  float: left;
+  display: inline-block;
+  margin-left: 5%;
+}
+.registerPanel .Form .aside .sendBtnAside{
+  width: 30%;
+  display: inline-block;
+  margin-right: 10%;
+}
+.registerPanel .Form .aside .sendBtnAside .sendBtn{
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  font-size: 14px;
+}
+.registerPanel .Form .tip{
+  position: absolute;
+  color: red;
+  left: 11%;
+}
+.registerPanel .Form .aside{
+  position: relative;
+}
+.registerPanel .Form .aside .icon{
+  font-size: 25px;
+  position: absolute;
+  bottom: 4px;
+  left: 12%;
+  color: #3a8bf9;
+}
+.registerPanel .Form .aside .icon-email{
+  left: 14%;
+}
+.registerPanel .Form .btnGrounp button{
+  height: 40px;
+  width: 40%;
+}
