@@ -2,7 +2,7 @@ const router = require('koa-router')()
 const token = require('../../token/token')
 const md5 = require('../../lib/tools.js')
 const { selectGroup } = require("../../model/userModel")
-const { selectGroupPersonNumber, addGroup, delGroup, getGroupIdByUidAndName} = require("../../model/groupModel")
+const { selectGroupPersonNumber, addGroup, delGroup, getGroupIdByUidAndName, getGroupByGroupName} = require("../../model/groupModel")
 const { delGroupPhoneByGid, changePhoneGroup } = require("../../model/phoneListModel")
 
 router.get('/grouplist', async (ctx) => {
@@ -20,12 +20,22 @@ router.get('/grouplist', async (ctx) => {
 })
 
 router.post('/addGroup', async (ctx) => {
-    await addGroup([ctx.request.body.groupName, ctx.request.body.groupColor, ctx.request.body.uid]).then(async res => {
-        if (res.affectedRows === 1) {
+    await getGroupByGroupName([ctx.request.body.uid, ctx.request.body.groupName]).then(async res => {
+        console.log(res.length)
+        if (res.length > 0) {
             ctx.body = {
-                code: 100,
-                message: "添加成功"
+                code: 113,
+                message: "对不起已存在该分组"
             }
+        } else {
+            await addGroup([ctx.request.body.groupName, ctx.request.body.groupColor, ctx.request.body.uid]).then(async res => {
+                if (res.affectedRows === 1) {
+                    ctx.body = {
+                        code: 100,
+                        message: "添加成功"
+                    }
+                }
+            })
         }
     })
 })

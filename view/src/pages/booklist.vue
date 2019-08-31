@@ -228,6 +228,7 @@ export default {
     addGroups () {
       this.isShowAddGroup = true
     },
+    cancel() {},
     cancelAddGroup () {
       this.isShowAddGroup = false
     },

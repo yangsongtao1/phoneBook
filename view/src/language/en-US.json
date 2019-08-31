@@ -27,6 +27,7 @@
   "account": "Account",
   "contactsGroup": "Contacts Group",
   "generalContact": "general Contact",
+  "repeatedGroup": "This grouping already exists. Do not add it again",
   "changeEmail": "Change Email",
   "person": "people",
   "changePw": "Change Password",

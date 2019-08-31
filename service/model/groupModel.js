@@ -25,4 +25,8 @@ let getGroupByGid = (value) => {
     return query(_sql, value)
 }
 
-module.exports  = {selectGroupPersonNumber, addGroup, delGroup, getGroupIdByUidAndName, getGroupByGid}
+let getGroupByGroupName = (value) => {
+    let _sql = "select * from listgroup where uid=? and groupName=?"
+    return query(_sql, value)
+}
+module.exports  = {selectGroupPersonNumber, addGroup, delGroup, getGroupIdByUidAndName, getGroupByGid, getGroupByGroupName}

@@ -61,16 +61,12 @@ export default {
             groupColor: this.groupColor,
             uid: this.$store.state.users.id
           }
-          axios.post('/api/addGroup', groupInfo).then(({status, data}) => {
-            if (status === 200) {
-              if (data.code === 100) {
-                this.$emit('confirmAddGroup')
-              } else if (data.code === 102 || data.code === 101) {
-                this.$Message.error(this.$t('tokenNotUsed'))
-                setTimeout( () => {
-                  this.$router.push('/login')
-                }, 1000)
-              }
+          axios.post('/api/addGroup', groupInfo).then(({data}) => {
+            console.log(data)
+            if (data.code === 100) {
+              this.$emit('confirmAddGroup')
+            } else if (data.code === 113) {
+              this.$Message.error(this.$t('repeatedGroup'))
             }
           })
         }

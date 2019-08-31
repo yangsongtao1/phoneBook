@@ -86,6 +86,7 @@
   "fail": "失败",
   "groupnametip": "请填写组名",
   "choosecolor": "请为该分组创建颜色",
+  "repeatedGroup": "该分组已经存在,请勿重复添加",
   "notDel": "不删除",
   "YesDel": "删除",
   "delGroupTip": "该分组将被删除，是否删除该分组下所有联系人",
