@@ -76,7 +76,9 @@
             username: this.username,
             password: this.password
           }
+          console.log(user)
           axios.post('/api/login', user).then(({data}) => {
+            console.log(data)
               if (data.code === 104) {
                 this.$Message.error(this.$t('noUser'));
               } else if (data.code === 105) {

@@ -19,3 +19,7 @@ html, body{
 .detail .ivu-checkbox-wrapper-disabled, .detail .ivu-checkbox-disabled, .detail .ivu-checkbox-input[disabled], .detail .ivu-checkbox-disabled+span{
   cursor: default;
 }
+
+.noteContent .ql-container{
+  height: calc(100% - 50px);
+}

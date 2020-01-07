@@ -52,7 +52,8 @@
 
 .layout-content-main .phoneList{
   margin-top: 10px;
-  height: 85%;
+  height: calc(100% - 160px);
+  overflow-y: auto;
 }
 .layout-content-main .listitem{
   display: inline-block;

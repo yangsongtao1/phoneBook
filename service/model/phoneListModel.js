@@ -40,4 +40,18 @@ let updataPhonelistById = (value) => {
     let _sql = "update phonelist set `name`=?, age=?, sex=?, phone=?, QQ=?, email=?, avator=?, mobile=?, address=?, remark=?, hobby=?, gid=? where id=?"
     return query(_sql, value)
 }
-module.exports  = {delGroupPhoneByGid, changePhoneGroup, addPhoneList, getPhoneListByGid, getPhoneListById, delPhoneListById, updataPhonelistById}
+
+let getNoteListByName = (name, uid) => {
+    let i
+    let _sql = `select * from phonelist where (name like "%${name}%" or phone like "%${name}%" or address like "%${name}%" or mobile like "%${name}%" or remark like "%${name}%" or hobby like "%${name}%") and`
+    for (i = 0; i < uid.length - 1; i++) {
+        _sql += ` (gid=${uid[i]} or `
+    }
+    if (uid.length === 1) {
+        _sql += ` gid=${uid[i]}`
+    } else {
+        _sql += `gid=${uid[i]})`
+    }
+    return query(_sql)
+}
+module.exports  = {delGroupPhoneByGid, changePhoneGroup, addPhoneList, getPhoneListByGid, getPhoneListById, delPhoneListById, updataPhonelistById, getNoteListByName}

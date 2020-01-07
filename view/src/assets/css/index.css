@@ -1,6 +1,6 @@
 .container{
   height: 100%;
-  min-width: 600px;
+  min-width: 700px;
 }
 .layout{
   height: 100%;
@@ -47,13 +47,16 @@
   outline: none;
   box-shadow: none;
 }
+.RightContent{
+  height: 100%;
+}
 .layout-content{
   min-height: 200px;
-  margin: 15px;
-  overflow: hidden;
+  margin: 15px 15px 0 15px;
+  overflow: auto;
   background: #fff;
   border-radius: 4px;
-  height: calc(100% - 130px);
+  height: calc(100% - 108px);
 }
 .layout-copy{
   text-align: center;

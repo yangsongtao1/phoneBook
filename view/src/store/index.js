@@ -5,10 +5,12 @@ import VueXAlong from 'vuex-along'
 Vue.use(Vuex)
 
 import users from './modules/user'
+import phoneEcharts from './modules/phoneEcharts'
 
 export default new Vuex.Store({
   modules:{
-    users
+    users,
+    phoneEcharts
   },
   plugins: [VueXAlong({
     name: 'phoneBook',

@@ -2,7 +2,7 @@ const router = require('koa-router')()
 const token = require('../../token/token')
 const md5 = require('../../lib/tools.js')
 
-const { addPhoneList, getPhoneListByGid, getPhoneListById, delPhoneListById, updataPhonelistById } = require("../../model/phoneListModel")
+const { addPhoneList, getPhoneListByGid, getPhoneListById, delPhoneListById, updataPhonelistById, getNoteListByName } = require("../../model/phoneListModel")
 const { getGroupByGid } = require("../../model/groupModel")
 router.post('/addContact', async (ctx, next) => {
     if (ctx.request.body.avator === '') {
@@ -91,6 +91,16 @@ router.post('/updataPhonelistById', async (ctx) => {
                 code: 100,
                 msg: '修改成功'
             }
+        }
+    })
+})
+
+router.post('/getNoteListByName', async (ctx) => {
+    await getNoteListByName(ctx.request.body.name, ctx.request.body.uid.split(',')).then(res => {
+        ctx.body={
+            code: 100,
+            msg: '查询成功',
+            lists: res
         }
     })
 })

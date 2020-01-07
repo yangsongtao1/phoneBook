@@ -1,6 +1,4 @@
 const router = require('koa-router')()
-const token = require('../../token/token')
-const md5 = require('../../lib/tools.js')
 const { selectGroup } = require("../../model/userModel")
 const { selectGroupPersonNumber, addGroup, delGroup, getGroupIdByUidAndName, getGroupByGroupName} = require("../../model/groupModel")
 const { delGroupPhoneByGid, changePhoneGroup } = require("../../model/phoneListModel")
@@ -45,7 +43,7 @@ router.post('/DelGroupAndPhone', async (ctx) => {
     await delGroup([ctx.request.body.id]).then(async res => {
         if (res.affectedRows === 0) {
             ctx.body = {
-                code: 104,
+                code: 115,
                 message: "删除失败"
             }
         } else if(res.affectedRows === 1) {
@@ -63,7 +61,7 @@ router.post('/onlyDelGroup', async (ctx) => {
     await delGroup([ctx.request.body.id]).then(async res => {
         if (res.affectedRows === 0) {
             ctx.body = {
-                code: 101,
+                code: 114,
                 message: "删除失败"
             }
         } else if(res.affectedRows === 1) {

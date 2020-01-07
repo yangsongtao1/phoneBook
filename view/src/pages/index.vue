@@ -8,9 +8,13 @@
               <i class="iconfont icon-phoneBook headerIcon"></i>
               <span  v-if="!notShowTitle">{{$t('webName')}}</span>
             </div>
-            <Menu-item name="list" :class="notShowTitle ? 'centerIcon' : ''">
+            <Menu-item name="phonelist" :class="notShowTitle ? 'centerIcon' : ''">
               <i class="iconfont icon-list" :class="notShowTitle ? 'onlyIcon':''"></i>
               <span class="layout-text">{{$t('phoneBook')}}</span>
+            </Menu-item>
+            <Menu-item name="notelist" :class="notShowTitle ? 'centerIcon' : ''">
+              <i class="iconfont icon-list" :class="notShowTitle ? 'onlyIcon':''"></i>
+              <span class="layout-text">{{$t('notelist')}}</span>
             </Menu-item>
             <Menu-item name="charts" :class="notShowTitle ? 'centerIcon' : ''" >
               <i class="iconfont icon-charts" :class="notShowTitle ? 'onlyIcon':''"></i>
@@ -18,7 +22,7 @@
             </Menu-item>
           </Menu>
         </i-col>
-        <i-col :span="spanRight">
+        <i-col :span="spanRight" class="RightContent">
           <div class="layout-header ivu-menu-dark">
             <i-button type="text" @click="toggleClick" class="shrinkButton">
               <i class="iconfont icon-shrink headerIcon"></i>

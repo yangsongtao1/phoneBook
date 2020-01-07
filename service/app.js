@@ -12,6 +12,7 @@ const grouplist = require('./routes/phonelist/grouplist')
 const phonelist = require('./routes/phonelist/phonelist')
 const userCenter = require('./routes/user/userCenter')
 const forgetPw = require('./routes/user/forgetPw')
+const notelist = require('./routes/notelist/notelist')
 
 const { checkResquest } = require("./token/checkRequest") //对每次需要检测登陆的接口进行统一检测
 
@@ -49,6 +50,7 @@ app.use(phonelist.routes(), phonelist.allowedMethods())
 app.use(register.routes(), register.allowedMethods())
 app.use(userCenter.routes(), userCenter.allowedMethods())
 app.use(forgetPw.routes(), forgetPw.allowedMethods())
+app.use(notelist.routes(), notelist.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {

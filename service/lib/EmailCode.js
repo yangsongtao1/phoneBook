@@ -5,6 +5,8 @@ const nodeMailer = require('nodemailer')
 let Store = new Redis().client
 
 const sendCode = async (ctx) => {
+    console.log('senCode')
+    console.log(ctx)
     let username = ctx.request.body.username
     console.log(ctx.request.body.username)
     const saveExpire = await Store.hget(`nodemail:${username}`, 'expire')

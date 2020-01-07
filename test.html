@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <aside class="listContent" id="listContent" style="height: 500px; width: 200px" contentEditable=true >
+    </aside>
+    <button id="list">测试</button>
+    <script type="text/javascript">
+        document.getElementById('list').addEventListener('click', function () {
+            console.log(document.execCommand("defaultParagraphSeparator", false, "p"))
+            let editor
+            editor = document.getElementById("listContent")
+        })
+    </script>
+</body>
+</html>

@@ -34,6 +34,7 @@ router.post('/register', async (ctx) => {
 router.post('/verify', async (ctx,next)=> {
     let isVerift = false
     await getAllByEmail([ctx.request.body.email]).then(res => {
+        console.log(res)
         if (res.length > 0) {
             isVerift = true
         }
